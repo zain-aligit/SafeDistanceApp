@@ -21,4 +21,8 @@ class MainActivity : Activity() {
         btn.setOnClickListener { /* Save baseline here later */ }
         setContentView(btn)
     }
+
+    // Start background service
+    val intent = Intent(this, DistanceGuardService::class.java)
+    startService(intent)
 }
